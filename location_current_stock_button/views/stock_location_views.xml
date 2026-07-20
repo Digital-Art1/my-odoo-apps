@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="stock_location_form_view_inherit" model="ir.ui.view">
+        <field name="name">stock.location.form.inherit.stock.button</field>
+        <field name="model">stock.location</field>
+        <field name="inherit_id" ref="stock.view_location_form"/>
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button name="action_open_stock_quants"
+                        type="object"
+                        class="oe_stat_button"
+                        icon="fa-cubes"
+                        help="Current stock in this location">
+                    <div class="o_stat_info">
+                        <field name="stock_quantity" widget="monetary" class="o_stat_value"/>
+                        <span class="o_stat_text">Current Stock</span>
+                    </div>
+                </button>
+            </div>
+        </field>
+    </record>
+</odoo>
